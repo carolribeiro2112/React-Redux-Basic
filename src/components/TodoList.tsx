@@ -8,7 +8,10 @@ export function TodoList() {
   return (
     <ul>
       {todos.map((todo) => (
-        <li key={todo}>{todo}</li>
+        <li key={todo} style={{ listStyleType: "none" }}>
+          <input type="checkbox" />
+          {todo}
+        </li>
       ))}
     </ul>
   );
